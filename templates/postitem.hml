@@ -1,0 +1,6 @@
+<li>
+    <a href=#{url}>#{title} #
+    -
+    <em> #{date} #
+    - by
+    <em> #{author}

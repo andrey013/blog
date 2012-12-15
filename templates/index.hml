@@ -1,0 +1,13 @@
+<div #posts>
+    <h1>Recent posts
+    <ul>
+        #{posts}
+    <p><a href=/posts.html>All posts&hellip;
+
+    <h1>Tags
+    <div>#{tagcloud}
+
+<div .about>
+    <h1>About
+    <p>This is a sample blog for educational purposes.
+

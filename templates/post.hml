@@ -1,0 +1,11 @@
+<h1>#{title}
+
+<p>
+    by
+    <em> #{author} #
+    on
+    <strong> #{date}
+
+<p>Tagged as: #{prettytags}.
+
+#{body}

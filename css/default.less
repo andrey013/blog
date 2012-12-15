@@ -1,0 +1,109 @@
+@import "lesshat";
+
+/**
+* Solarized color scheme
+* Author: Ethan Schoonover
+*/
+
+@base03: #002b36;
+@base02: #073642;
+@base01: #586e75;
+@base00: #657b83;
+@base0: #839496;
+@base1: #93a1a1;
+@base2: #eee8d5;
+@base3: #fdf6e3;
+@yellow: #b58900;
+@orange: #cb4b16;
+@red: #dc322f;
+@magenta: #d33682;
+@violet: #6c71c4;
+@blue: #268bd2;
+@cyan: #2aa198;
+@green: #859900;
+@paragraphfont: 'Open Sans', sans-serif;
+@headlinefont: 'Comfortaa', cursive;
+@width: 600px;
+
+.rebase (@rebase03,@rebase02,@rebase01,@rebase00,@rebase0,@rebase1,@rebase2,@rebase3)
+{
+    * { color:@rebase0; }
+    body { background-color:@rebase03; }
+    h1,h2,h3,h4,h5,h6 { color:@rebase1; border-color: @rebase0; }
+    //h1#pagetitle, h1:first-of-type { color: @rebase1; }
+    //h2#pagesubtitle, h2:first-of-type { color: @rebase01; }
+    a, a:active, a:visited { color: @rebase1; }
+    a:hover { background-color: @rebase02 }
+    header {
+        background-color: @rebase01;
+        color: @rebase1;
+        a.navlink, a:active.navlink, a:visited.navlink { color: @rebase1; }
+        a:hover.navlink { background: transparent; color: @rebase02; }
+        #sitelink { color: @rebase02; background-color: @rebase1 }
+    }
+    footer {
+        background-color: @rebase02;
+        color: @rebase01;
+    }
+    pre {
+        color: @rebase1;
+        background-color: @rebase02;
+    }
+    tr:nth-child(odd) { background-color:@rebase02 }
+    th { color:@rebase1; background-color:@rebase03; }
+    * {
+        text-shadow: -1px -1px 1px @rebase02;
+    }
+}
+
+.accentize(@accent) {
+    a#sitelink{ background-color:@accent; }
+    a, a:active, a:visited, code.url { color: @accent; }
+    h1 {color:@accent}
+    h2,h3,h4,h5,h6 {color:@accent}
+    h1#pagetitle, h1:first-of-type { color: @accent; }
+}
+/*
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li,
+dt, dd, p, blockquote, pre, form, fieldset, table, th, td
+{ margin: 0; padding: 0; }  
+*/
+html, html.light { .rebase(@base3,@base2,@base1,@base0,@base00,@base01,@base02,@base03)}
+html.dark { .rebase(@base03,@base02,@base01,@base00,@base0,@base1,@base2,@base3)}
+
+html {
+    color-profile: sRGB;
+    rendering-intent: auto;
+}
+
+body {
+    width: @width;
+    margin: 0px auto;
+    font-size: 125%;
+    font-family: @paragraphfont;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: @headlinefont; }
+
+
+code { font-family: monospace; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre
+   { margin: 0; padding: 0; border: 0; vertical-align: baseline; border: none; }
+td.lineNumbers { border-right: 1px solid #AAAAAA; text-align: right; color: #AAAAAA; padding-right: 5px; padding-left: 5px; }
+td.sourceCode { padding-left: 5px; }
+pre.sourceCode { }
+code.sourceCode {
+    span.kw { color: @yellow; font-weight: bold; }
+    span.dt { color: @cyan; }
+    span.dv { color: @base01; }
+    span.bn { color: @orange; }
+    span.fl { color: @cyan; }
+    span.ch { color: @red; }
+    span.st { color: @magenta; }
+    span.co { color: @base01; font-style: italic; }
+    span.ot { }
+    span.al { color: @green; font-weight: bold; }
+    span.fu { color: @blue; }
+    span.re { }
+    span.er { color: @red; font-weight: bold; }
+}

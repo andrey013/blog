@@ -1,0 +1,22 @@
+name:                blog
+version:             0.1.0.0
+-- synopsis:            
+-- description:         
+-- homepage:            
+license:             BSD3
+license-file:        LICENSE
+author:              Andrey Yankin
+maintainer:          yankin013@gmail.com
+-- copyright:           
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable blog
+  main-is:             blog.hs
+  Ghc-options:         -Wall -O2
+  -- Extensions:       
+  Hs-source-dirs:      src
+  -- other-modules:       
+  build-depends:       base ==4.5.*
+                     , hakyll
